@@ -1,0 +1,64 @@
+# создание продукта
+POST http://localhost:8000/api/v1/products/
+Content-Type: application/json
+
+{
+  "title": "Морковь",
+  "description": ""
+}
+
+###
+# создание склада
+POST http://localhost:8000/api/v1/stocks/
+Content-Type: application/json
+
+{
+  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "positions": [
+    {
+      "product": 2,
+      "quantity": 250,
+      "price": 120.50
+    },
+    {
+      "product": 3,
+      "quantity": 100,
+      "price": 180
+    }
+  ]
+}
+
+
+###
+# получение продуктов
+GET http://localhost:8000/api/v1/products/
+Content-Type: application/json
+
+###
+
+# обновление продукта
+PATCH http://localhost:8000/api/v1/products/1/
+Content-Type: application/json
+
+{
+  "description": "Самые сочные и ароматные помидорки"
+}
+
+###
+
+# поиск продуктов по названию и описанию
+GET http://localhost:8000/api/v1/products/?search=помидор
+Content-Type: application/json
+
+###
+# поиск складов, где есть определенный продукт
+GET http://localhost:8000/api/v1/stocks/?products=2
+Content-Type: application/json
+
+###
+
+# удаление продукта
+DELETE http://localhost:8000/api/v1/products/3/
+Content-Type: application/json
+
+###
