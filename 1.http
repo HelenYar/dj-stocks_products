@@ -13,7 +13,7 @@ POST http://localhost:8000/api/v1/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "ленинград-спб.ru4",
   "positions": [
     {
       "product": 2,
@@ -21,7 +21,7 @@ Content-Type: application/json
       "price": 120.50
     },
     {
-      "product": 3,
+      "product": 4,
       "quantity": 100,
       "price": 180
     }
